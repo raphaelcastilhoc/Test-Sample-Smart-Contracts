@@ -10,7 +10,7 @@ jobs:
       - name: Run CLI
         uses: raphaelcastilhoc/CLI/actions@main
         env:
-          OLYMPIX_API_TOKEN: ${{ ${{ secrets.OLYMPIX_API_TOKEN }} }}
+          OLYMPIX_API_TOKEN: ${{ secrets.OLYMPIX_API_TOKEN }}
         with:
           workspace: ${{ github.workspace }}
 
