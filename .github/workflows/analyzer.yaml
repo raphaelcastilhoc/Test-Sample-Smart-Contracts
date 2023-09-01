@@ -7,16 +7,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
-      - name: List Project Files
-        run: |
-          echo $GITHUB_WORKSPACE
-          ls $GITHUB_WORKSPACE
-      
-      - name: Pull Docker image
-        run: docker pull raphaelcastilhoc/cli:latest
-
-      - name: Run Docker container CLI
-        run: docker run -e OLYMPIX_API_TOKEN=${{ secrets.OLYMPIX_API_TOKEN }} --name raphaelcastilhoc-cli raphaelcastilhoc/cli analyze -p $GITHUB_WORKSPACE -o $GITHUB_WORKSPACE -f sarif
+      - name: Run CLI
+        uses: raphaelcastilhoc/CLI/actions@main
 
       - name: Upload result to GitHub Code Scanning
         uses: github/codeql-action/upload-sarif@v2
