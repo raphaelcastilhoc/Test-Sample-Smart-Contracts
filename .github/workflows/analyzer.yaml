@@ -1,0 +1,16 @@
+name: Example workflow
+on: push
+jobs:
+  security:
+    runs-on: ubuntu-latest
+        
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Run CLI
+        uses: raphaelcastilhoc/CLI/actions@main
+
+      - name: Upload result to GitHub Code Scanning
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: olympix.sarif
