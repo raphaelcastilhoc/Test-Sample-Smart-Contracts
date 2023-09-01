@@ -7,9 +7,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
-      - name: Print GITHUB_WORKSPACE
+      - name: List Project Files
         run: |
-          echo "The workspace directory is: ${{ github.workspace }}"
+          ls $GITHUB_WORKSPACE
       
       - name: Pull Docker image
         run: docker pull raphaelcastilhoc/cli:latest
