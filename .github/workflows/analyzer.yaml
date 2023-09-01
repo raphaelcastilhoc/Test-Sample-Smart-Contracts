@@ -11,7 +11,7 @@ jobs:
         run: docker pull raphaelcastilhoc/cli:latest
 
       - name: Run Docker container CLI
-        run: docker run --name raphaelcastilhoc-cli raphaelcastilhoc/cli analyze -p ./ -o ./ -f sarif -e OLYMPIX_API_TOKEN=${{ secrets.OLYMPIX_API_TOKEN }}
+        run: docker run -e OLYMPIX_API_TOKEN=${{ secrets.OLYMPIX_API_TOKEN }} --name raphaelcastilhoc-cli raphaelcastilhoc/cli analyze -p ./ -o ./ -f sarif
 
       - name: Upload result to GitHub Code Scanning
         uses: github/codeql-action/upload-sarif@v2
