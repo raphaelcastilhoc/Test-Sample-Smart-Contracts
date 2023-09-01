@@ -3,6 +3,8 @@ on: push
 jobs:
   security:
     runs-on: ubuntu-latest
+    env: 
+      OLYMPIX_API_TOKEN: ${{ secrets.OLYMPIX_API_TOKEN }}
         
     steps:
       - uses: actions/checkout@v3
@@ -12,8 +14,6 @@ jobs:
 
       - name: Run Docker container CLI
         run: docker run --name raphaelcastilhoc-cli raphaelcastilhoc/cli analyze -p ./ -o ./ -f sarif
-        env:
-          OLYMPIX_API_TOKEN: ${{ secrets.OLYMPIX_API_TOKEN }}
 
       - name: Upload result to GitHub Code Scanning
         uses: github/codeql-action/upload-sarif@v2
