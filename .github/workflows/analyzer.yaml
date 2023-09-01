@@ -12,8 +12,7 @@ jobs:
         env:
           OLYMPIX_API_TOKEN: ${{ secrets.OLYMPIX_API_TOKEN }}
         with:
-          command: analyze
-          args: -f sarif -o ./
+          args: analyze -f sarif -o ./
 
       - name: Upload result to GitHub Code Scanning
         uses: github/codeql-action/upload-sarif@v2
