@@ -7,6 +7,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
+      - name: Print GITHUB_WORKSPACE
+        run: |
+          echo "The workspace directory is: $GITHUB_WORKSPACE"
+      
       - name: Pull Docker image
         run: docker pull raphaelcastilhoc/cli:latest
 
