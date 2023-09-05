@@ -6,6 +6,11 @@ jobs:
     
     steps:
       - uses: actions/checkout@v3
+
+      - name: "Show relative path"
+        run: |
+          echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
+          echo "github.workspace: ${{ github.worskpace }}"
       
       - name: Run CLI
         uses: raphaelcastilhoc/CLI/actions@main
