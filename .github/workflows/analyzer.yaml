@@ -6,11 +6,6 @@ jobs:
     
     steps:
       - uses: actions/checkout@v3
-
-      - name: "Show relative path"
-        run: |
-          echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
-          echo "github.workspace: ${{ github.worskpace }}"
       
       - name: Run CLI
         uses: raphaelcastilhoc/CLI/actions@main
@@ -18,7 +13,9 @@ jobs:
           OLYMPIX_API_TOKEN: ${{ secrets.OLYMPIX_API_TOKEN }}
           OLYMPIX_CLI_LOG_LEVEL: "0"
         with:
-          outputPath: $GITHUB_WORKSPACE
+          workspace: $GITHUB_WORKSPACE
+          result-format: sarif
+          output-directory: ./
 
       - name: Upload result to GitHub Code Scanning
         uses: github/codeql-action/upload-sarif@v2
