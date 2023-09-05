@@ -6,10 +6,6 @@ jobs:
     
     steps:
       - uses: actions/checkout@v3
-
-      - name: "Show files"
-        run:
-          ls $GITHUB_WORKSPACE
       
       - name: Run CLI
         uses: raphaelcastilhoc/CLI/actions@main
