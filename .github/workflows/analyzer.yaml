@@ -9,7 +9,7 @@ jobs:
 
       - name: "Show files"
         run:
-          ls my_directory
+          ls $GITHUB_WORKSPACE
       
       - name: Run CLI
         uses: raphaelcastilhoc/CLI/actions@main
