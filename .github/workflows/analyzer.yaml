@@ -12,7 +12,7 @@ jobs:
         env:
           OLYMPIX_API_TOKEN: ${{ secrets.OLYMPIX_API_TOKEN }}
         with:
-          args: --output-format sarif --output-path ./ --path ./test
+          args: --output-format sarif --output-path ./ --path $GITHUB_WORKSPACE
 
       - name: Upload result to GitHub Code Scanning
         uses: github/codeql-action/upload-sarif@v2
