@@ -11,8 +11,6 @@ jobs:
         uses: raphaelcastilhoc/CLI/actions@main
         env:
           OLYMPIX_API_TOKEN: ${{ secrets.OLYMPIX_API_TOKEN }}
-        with:
-          args: analyze -f sarif -o ./ --no-uninitialized-state-variable
 
       - name: Upload result to GitHub Code Scanning
         uses: github/codeql-action/upload-sarif@v2
