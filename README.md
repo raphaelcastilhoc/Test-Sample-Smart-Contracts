@@ -2,7 +2,7 @@
 
 ## Overview
 
-This action allows integration of GitHub projects with Olympix vulnerability analyzer. The Olympix GitHub Action performs code analysis on projects written in Solidity. By using the Olympix GitHub Action, developers can find potentially dangerous vulnerabilities when CI workflow runs.
+This action allows integration of GitHub projects with Olympix vulnerability analyzer. The action performs code analysis on projects written in Solidity. By using the Olympix GitHub Action, developers can find potentially dangerous vulnerabilities when CI workflow runs.
 
 ## Features
 
