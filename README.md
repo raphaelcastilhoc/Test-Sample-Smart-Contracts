@@ -2,7 +2,7 @@
 
 ## Overview
 
-This action allows integration of GitHub projects with Olympix vulnerability analyzer. The action performs code analysis on projects written in Solidity. By using the Olympix GitHub Action, developers can find potentially dangerous vulnerabilities when CI workflow runs.
+Olympix Integrated Security action allows integration of GitHub projects with Olympix vulnerability analyzer. The action performs code analysis on projects written in Solidity. By using this action, developers can find potentially dangerous vulnerabilities when CI workflow runs.
 
 ## Features
 
@@ -18,7 +18,7 @@ This action allows integration of GitHub projects with Olympix vulnerability ana
 
 ## Usage
 
-Here's a workflow example using Olympix Integrated Security action with default rules and uploading result to GitHub Code Scanning tool
+Here's a workflow example that utilizes the Olympix Integrated Security action with default rules and uploads the result to the GitHub Code Scanning tool.
 
 ```shell
 name: Example Workflow
