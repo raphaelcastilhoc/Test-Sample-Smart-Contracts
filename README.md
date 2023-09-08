@@ -39,6 +39,7 @@ jobs:
         uses: github/codeql-action/upload-sarif@v2
         with:
           sarif_file: olympix.sarif
+```
 
 ## Support Contact
 
