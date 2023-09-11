@@ -4,7 +4,7 @@
 
 Olympix Integrated Security action allows integration of GitHub projects with Olympix vulnerability analyzer. The action performs code analysis on projects written in Solidity. By using this action, developers can find potentially dangerous vulnerabilities when CI workflow runs.
 
-![alt text]([http://url/to/img.png](https://github.com/raphaelcastilhoc/Test-Sample-Smart-Contracts/blob/main/vulnerabilities.PNG))
+![vulnerabilities](https://github.com/raphaelcastilhoc/Test-Sample-Smart-Contracts/blob/main/vulnerabilities.PNG)
 
 ## Features
 
