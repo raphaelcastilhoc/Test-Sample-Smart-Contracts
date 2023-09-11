@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: UNLICENSED
+
 pragma solidity 0.5.17;
 
 import "../PToken/PErc20/PErc20Delegate.sol";
