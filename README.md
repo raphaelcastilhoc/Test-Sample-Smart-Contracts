@@ -42,6 +42,7 @@ jobs:
         with:
           sarif_file: olympix.sarif
 ```
+![vulnerabilities](https://github.com/raphaelcastilhoc/Test-Sample-Smart-Contracts/blob/main/vulnerability_detail.PNG)
 
 ## Support Contact
 
