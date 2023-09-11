@@ -45,7 +45,11 @@ jobs:
           sarif_file: olympix.sarif
 ```
 
+<br/>
+
 ![vulnerabilities_json](https://github.com/raphaelcastilhoc/Test-Sample-Smart-Contracts/blob/main/vulnerability_detail.PNG)
+
+<br/>
 
 Here's a workflow example that utilizes the Olympix Integrated Security action with json output result on Github console, and excludes 'uninitialized state variable' and 'default visibility' vulnerabilities.
 
@@ -67,6 +71,8 @@ jobs:
           args: -f json --no-uninitialized-state-variable --no-default-visibility
 ```
 ![vulnerabilities](https://github.com/raphaelcastilhoc/Test-Sample-Smart-Contracts/blob/main/vulnerability_json_output.PNG)
+
+<br/>
 
 ## Support Contact
 
