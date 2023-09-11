@@ -47,6 +47,26 @@ jobs:
 
 ![vulnerabilities](https://github.com/raphaelcastilhoc/Test-Sample-Smart-Contracts/blob/main/vulnerability_detail.PNG)
 
+Here's a workflow example that utilizes the Olympix Integrated Security action with json output result on Github console, and excludes 'uninitialized state variable' and 'default visibility' vulnerabilities.
+
+```shell
+name: Integrated Security Workflow
+on: push
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Olympix Integrated Security
+        uses: olympix/integrated-security@main
+        env:
+          OLYMPIX_API_TOKEN: ${{ secrets.OLYMPIX_API_TOKEN }}
+        with:
+          args: -f json --no-uninitialized-state-variable --no-default-visibility
+```
+![vulnerabilities](https://github.com/raphaelcastilhoc/Test-Sample-Smart-Contracts/blob/main/vulnerability_json_output.PNG)
 
 ## Support Contact
 
