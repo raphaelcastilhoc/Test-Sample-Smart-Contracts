@@ -22,7 +22,7 @@ The Olympix Integrated Security action enables Olympix's vulnerability analysis 
 
 ## Usage
 
-Here's a workflow example that utilizes the Olympix Integrated Security action with default rules and uploads the result to the GitHub Code Scanning tool.
+Here's a workflow example that utilizes the Olympix Integrated Security action with default rules and uploads the result to the GitHub Code Scanning tool (It is necessary to enable `Read and write permissions` on `Worflow permissions` to upload result to GitHub Code Scanning).
 
 ```shell
 name: Integrated Security Workflow
@@ -68,6 +68,9 @@ jobs:
         with:
           args: -f json --no-uninitialized-state-variable --no-default-visibility
 ```
+
+<br/>
+
 ![vulnerabilities](https://github.com/raphaelcastilhoc/Test-Sample-Smart-Contracts/blob/main/vulnerability_json_output.PNG)
 
 <br/>
