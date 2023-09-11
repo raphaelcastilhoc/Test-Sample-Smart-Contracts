@@ -16,9 +16,9 @@ The Olympix Integrated Security action enables Olympix's vulnerability analysis 
 
 ## Getting Started
 
-1. Add a GitHub repository secret with `OLYMPIX_API_TOKEN` as the name and your API token as the value.
-2. Add the `olympix/integrated-security` GitHub action into your workflow.
-3. (Optional) If necessary, customize the scanning rules using the input `args`.
+1. Add a GitHub repository secret with `OLYMPIX_API_TOKEN` as the name and your API token as the value
+2. Add the `olympix/integrated-security` GitHub action into your workflow
+3. (Optional) If necessary, customize the scanning rules using the input `args`
 
 ## Usage
 
@@ -48,8 +48,6 @@ jobs:
 <br/>
 
 ![vulnerabilities_json](https://github.com/raphaelcastilhoc/Test-Sample-Smart-Contracts/blob/main/vulnerability_detail.PNG)
-
-<br/>
 
 Here's a workflow example that utilizes the Olympix Integrated Security action with json output result on Github console, and excludes 'uninitialized state variable' and 'default visibility' vulnerabilities.
 
