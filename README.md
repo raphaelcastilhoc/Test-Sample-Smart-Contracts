@@ -49,7 +49,7 @@ jobs:
 
 ![vulnerabilities_json](https://github.com/raphaelcastilhoc/Test-Sample-Smart-Contracts/blob/main/vulnerability_detail.PNG)
 
-Here's a workflow example that utilizes the Olympix Integrated Security action with `json` output result on Github console, and excludes `uninitialized state variable` and `default visibility` vulnerabilities.
+Here's a workflow example that utilizes the Olympix Integrated Security action with `json` result to the Github console, and excludes `uninitialized state variable` and `default visibility` vulnerabilities.
 
 ```shell
 name: Integrated Security Workflow
