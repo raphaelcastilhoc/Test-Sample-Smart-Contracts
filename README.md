@@ -2,7 +2,7 @@
 
 ## Overview
 
-Olympix Integrated Security action allows integration of GitHub projects with Olympix vulnerability analyzer. The action performs code analysis on projects written in Solidity. By using this action, developers can find potentially dangerous vulnerabilities when CI workflow runs.
+The Olympix Integrated Security action enables Olympix's vulnerability analysis tools to be incorporated into continuous integration workflows for code repositories on GitHub. The action currently performs code analysis on projects written in Solidity and has flexible options for results output, using the SARIF format by default. By using this action, Solidity developers can find potentially dangerous vulnerabilities in their smart contracts when the CI workflow runs.
 
 
 ![vulnerabilities](https://github.com/raphaelcastilhoc/Test-Sample-Smart-Contracts/blob/main/vulnerabilities.PNG)
@@ -10,15 +10,15 @@ Olympix Integrated Security action allows integration of GitHub projects with Ol
 
 ## Features
 
-- **Code Scanning:** Quickly scan your Github project for vulnerabilities
-- **Detailed Results:** View detailed results in different formats, directly on GitHub workflow console or on GitHub Code Scanning tool
+- **Code Scanning:** Quickly scan your GitHub-based project for vulnerabilities
+- **Detailed Results:** View detailed results in different formats, directly on the GitHub workflow console or using the GitHub Code Scanning tool
 - **Customizable Rules:** Customize the scanning rules to fit your requirements
 
 ## Getting Started
 
-1. Add a GitHub repository secret with name OLYMPIX_API_TOKEN and value with your API token
-2. Add olympix/integrated-security GitHub action in your workflow
-3. (Optional) If necessary, customize the scanning rules using the input 'args'
+1. Add a GitHub repository secret with `OLYMPIX_API_TOKEN` as the name and your API token as the value.
+2. Add the `olympix/integrated-security` GitHub action into your workflow.
+3. (Optional) If necessary, customize the scanning rules using the input `args`.
 
 ## Usage
 
