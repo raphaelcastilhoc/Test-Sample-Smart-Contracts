@@ -1,4 +1,4 @@
-name: Example workflow
+name: Integrated Security Workflow
 on: push
 jobs:
   security:
@@ -6,3 +6,15 @@ jobs:
     
     steps:
       - uses: actions/checkout@v3
+      
+      - name: Olympix Integrated Security
+        uses: olympix/integrated-security@main
+        env:
+          OLYMPIX_API_TOKEN: ${{ secrets.OLYMPIX_API_TOKEN }}
+        with:
+          args: -f json
+
+      - name: Upload result to GitHub Code Scanning
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: olympix.sarif
