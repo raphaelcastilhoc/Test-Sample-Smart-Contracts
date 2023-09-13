@@ -25,7 +25,38 @@ contract Demonstration {
         require(tx.origin == owner); 
         owner = msg.sender;
     }
-    
+
+function coinFlip(bool _guess) public returns (bool) {
+        uint256 coinFlip = uint256(blockhash(block.number - 1)) / 99;
+        bool side = coinFlip == 1 ? true : false;
+        if (side == _guess) {
+            consecutiveWins++;
+            return true;
+        } else {
+            consecutiveWins = 0;
+            return false;
+        }
+    }
+
+    function buyMultipleNFTs(uint256 numNFTs) external payable {
+        for (uint i = 0; i < numNFTs; i++) {
+            if (msg.value < 1 ether) {
+            revert("Insufficient payment");
+            }
+            nftOwners[nextNftId] = buyer;
+            nextNftId =+ 1;
+        }
+    }
+
+    function reserveTokens() public payable {
+        uint256 weiSent = msg.value;
+        uint256 reservationAmount;
+        assembly {
+            reservationAmount := shl(weiSent, 2)
+        }
+        reservations[msg.sender] = reservationAmount;
+    }
+
     function destroy() public {
         selfdestruct(msg.sender); 
     }
