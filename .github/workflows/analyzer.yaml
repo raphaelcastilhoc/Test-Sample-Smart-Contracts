@@ -11,8 +11,6 @@ jobs:
         uses: olympix/integrated-security@main
         env:
           OLYMPIX_API_TOKEN: ${{ secrets.OLYMPIX_API_TOKEN }}
-        with:
-          args: -f json
 
       - name: Upload result to GitHub Code Scanning
         uses: github/codeql-action/upload-sarif@v2
