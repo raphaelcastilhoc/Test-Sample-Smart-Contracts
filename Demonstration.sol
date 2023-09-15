@@ -57,6 +57,25 @@ function coinFlip(bool _guess) public returns (bool) {
         reservations[msg.sender] = reservationAmount;
     }
 
+    function addAdmin(address _address) public {
+        require(owner == msg.sender);
+        require(nextUnusedAdminSlot < 3);
+        updateAdmin(contractAdmins, nextUnusedAdminSlot, _address);
+        nextUnusedAdminSlot = nextUnusedAdminSlot + 1;
+    }
+
+    function removeAdminBySlot(uint8 _adminSlot) public {
+        require(owner == msg.sender);
+        require(_adminSlot < 3);
+        clearArraySlot(contractAdmins, _adminSlot);
+    }
+
+    function updateAdmin(address[3] storage _admins,
+                        uint8 _adminId,
+                        address _newAdminAddress) internal {
+        _admins[_adminId] = _newAdminAddress;
+    }
+
     function destroy() public {
         selfdestruct(msg.sender); 
     }
