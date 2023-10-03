@@ -9,7 +9,7 @@ import "./ComptrollerCommonImpl.sol";
  * @title Compound's Comptroller Part2 Contract
  * @author Compound, Paribus
  */
-contract ComptrollerPart2 is ComptrollerPart2Interface, ComptrollerCommonImpl {
+contract ComptrollerPart2_Sample is ComptrollerPart2Interface, ComptrollerCommonImpl {
     /*** Assets You Are In ***/
 
     /**
