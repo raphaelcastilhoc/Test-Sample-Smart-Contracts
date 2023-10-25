@@ -11,6 +11,7 @@ jobs:
         uses: raphaelcastilhoc/test-action@main
         env:
           OLYMPIX_API_TOKEN: ${{ secrets.OLYMPIX_API_TOKEN }}
+          OLYMPIX_CLI_LOG_LEVEL: 0
 
       - name: Upload result to GitHub Code Scanning
         uses: github/codeql-action/upload-sarif@v2
