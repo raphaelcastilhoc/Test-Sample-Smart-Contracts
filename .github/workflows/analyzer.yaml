@@ -9,7 +9,7 @@ jobs:
 
       - name: Show GITHUB_REF
         id: show_ref
-        run: echo "${{ $GITHUB_REF }}"
+        run: echo "${{ GITHUB_REF }}"
         
       - name: Set main branch name
         id: branch_name
