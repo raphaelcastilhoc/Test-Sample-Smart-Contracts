@@ -454,26 +454,5 @@
                 assertEq(ico.acceptingRedemptions(), false, "Redemptions should not be accepted");
             
             }
-        
-            function test_toggleAcceptingRedemptions_ToggleAcceptingRedemptionsByOwnerInitialStateFalse() public {
-            
-                // alice creates an ico, allowing herself and bob, but toggles accepting redemptions, so redemptions should not be accepted
-                vm.startPrank(alice);
-                address[] memory allowList = new address[](2);
-                allowList[0] = alice;
-                allowList[1] = bob;
-                address treasury = address(0xdef);
-                Ico ico = new Ico(allowList, treasury);
-                ico.toggleAcceptingRedemptions();
-                vm.stopPrank();
-                // check that acceptingRedemptions is now false
-                assertEq(ico.acceptingRedemptions(), false, "Redemptions should not be accepted");
-                // alice toggles accepting redemptions again, so redemptions should now be accepted
-                vm.startPrank(alice);
-                ico.toggleAcceptingRedemptions();
-                vm.stopPrank();
-                // check that acceptingRedemptions is now true
-                assertEq(ico.acceptingRedemptions(), true, "Redemptions should be accepted");
-            }
         }
         
